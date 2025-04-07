@@ -22,7 +22,7 @@ app.post("/signin", (req, res) => {
 })
 
 app.get("/user", (req, res) => {
-    const cookieToken = req.cookies.token;
+    const cookieToken = req.cookies.token; //set set-cookie value empty
 
     const decoded = jwt.verify(cookieToken, jwtsecret) as JwtPayload;
 
